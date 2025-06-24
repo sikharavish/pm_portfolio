@@ -33,7 +33,7 @@ Each project is designed to reflect a core pillar of modern product leadership:
 
 ## 📆 Weekly Progress
 
-Check the [📊 Streamlit dashboard](#) (coming soon) for real-time progress tracking.
+Check the [📊 Streamlit dashboard](#) (https://ravishsikha.streamlit.app/) for real-time progress tracking.
 
 | Week | Focus | Status |
 |------|-------|--------|
