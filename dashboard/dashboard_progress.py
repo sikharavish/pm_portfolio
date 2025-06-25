@@ -10,7 +10,16 @@ This dashboard tracks my weekly progress across a 90-day build focused on techni
 Each week blends coding, product strategy, and reflection — targeting IC7+ PM roles at top-tier tech companies.
 """)
 
-# Weekly progress tracker
+# Define completed tasks
+completed_tasks = [
+    # Week 0
+    "Set up Python, Node.js, Git, Docker, PostgreSQL locally",
+    "Set up VS Code as IDE + GitHub repo",
+    "Streamlit 'Hello World' dashboard created",
+    "Started CS50P (Units 0–2)"
+]
+
+# Weekly tasks
 weeks = {
     "Week 0 (Jun 24–30)": [
         "Set up Python, Node.js, Git, Docker, PostgreSQL locally",
@@ -43,11 +52,12 @@ weeks = {
     ]
 }
 
-# Display checklist
+# Display each week's section with read-only checkboxes
 for week, tasks in weeks.items():
     st.markdown(f"### {week}")
     for task in tasks:
-        st.checkbox(task, value=False, key=f"{week}_{task}")
+        checked = task in completed_tasks
+        st.checkbox(label=task, value=checked, disabled=True, key=f"{week}_{task}")
 
 # Footer
 st.markdown("---")
